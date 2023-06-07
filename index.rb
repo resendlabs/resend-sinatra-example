@@ -17,6 +17,5 @@ get "/" do
     html: '<strong>it works!</strong>',
   }
 
-  email = Resend::Emails.send(params).to_hash
-  email.to_json
+  Resend::Emails.send(params).to_hash.to_json
 end
