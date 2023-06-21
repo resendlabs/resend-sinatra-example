@@ -11,8 +11,8 @@ get "/" do
   content_type :json
 
   params = {
-    from: 'onboarding@resend.dev',
-    to: 'delivered@resend.dev',
+    from: 'Acme <onboarding@resend.dev>',
+    to: ['delivered@resend.dev'],
     subject: 'hello world',
     html: '<strong>it works!</strong>',
   }
